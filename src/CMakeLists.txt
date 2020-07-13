@@ -1,8 +1,11 @@
 cmake_minimum_required(VERSION 3.15)
 
 set(SOURCES
+    Alcohol.cpp
     Cargo.cpp
+    Fruit.cpp
     Island.cpp
+    Item.cpp
     Map.cpp
     Player.cpp
     Ship.cpp
