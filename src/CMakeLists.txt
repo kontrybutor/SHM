@@ -4,6 +4,7 @@ set(SOURCES
     Cargo.cpp
     Island.cpp
     Map.cpp
+    Player.cpp
     Ship.cpp
     main.cpp
     )
