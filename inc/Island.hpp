@@ -12,7 +12,7 @@ public:
         Coordinates(int positionX, int positionY)
             : positionX_(positionX), positionY_(positionY) {}
 
-        bool operator==(const Coordinates& rhs);
+        bool operator==(const Coordinates& rhs) const;
 
     private:
         const int positionX_ = 0;
@@ -22,5 +22,5 @@ public:
     Coordinates getPosition() const { return position_; }
 
 private:
-    Coordinates position_;
+    const Coordinates position_;
 };
