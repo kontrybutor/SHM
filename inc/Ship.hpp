@@ -1,6 +1,9 @@
 #pragma once
 
 #include <string>
+#include <vector>
+
+#include "Cargo.hpp"
 
 class Ship {
 public:
@@ -23,10 +26,13 @@ public:
     void setName(const std::string& name) { name_ = std::move(name); }
 
 private:
-    int id_;
+    size_t countAvailableSpace() const;
+
+    const int id_;
     std::string name_;
     size_t speed_;
     size_t maxCrew_;
     size_t capacity_;
     size_t crew_;
+    std::vector<Cargo> cargos_;
 };
