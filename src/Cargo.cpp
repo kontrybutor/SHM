@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-bool Cargo::operator==(const Cargo& cargo) {
+bool Cargo::operator==(const Cargo& cargo) const {
     return name_ == cargo.name_ && amount_ == cargo.amount_ && basePrice_ == cargo.basePrice_;
 }
 
