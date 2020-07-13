@@ -7,8 +7,11 @@ public:
     Fruit(size_t amount, const std::string& name, size_t basePrice, size_t expiryDate)
         : Cargo(amount, name, basePrice), expiryDate_(expiryDate) {}
 
+    ~Fruit();
+
     Fruit& operator--();
-    float getPrice();
+
+    size_t getTimeToSpoil() const { return timeToSpoil_; }
 
     // override from Cargo
     std::string getName() const override { return name_; }

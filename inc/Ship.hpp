@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include <string>
 #include <vector>
 
@@ -35,5 +36,5 @@ private:
     size_t maxCrew_;
     size_t capacity_;
     size_t crew_;
-    std::vector<Cargo> cargos_;
+    std::vector<std::shared_ptr<Cargo>> cargos_;
 };

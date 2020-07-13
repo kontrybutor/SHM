@@ -25,6 +25,6 @@ Ship& Ship::operator-=(size_t crew) {
 
 size_t Ship::countAvailableSpace() const {
     auto reservedSpace = std::accumulate(cargos_.begin(), cargos_.end(), 0,
-                                         [](size_t space, const auto& cargo) { return space += cargo.getAmount(); });
+                                         [](size_t space, const auto& cargo) { return space += cargo->getAmount(); });
     return capacity_ - reservedSpace;
 }
