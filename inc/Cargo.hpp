@@ -14,9 +14,9 @@ public:
     Cargo& operator-=(size_t amount);
 
     void print() const;
-    size_t getAmount() const;
-    std::string getName() const;
-    size_t getPrice() const;
+    size_t getAmount() const {return amount_;};
+    std::string getName() const {return name_;};
+    size_t getPrice() const {return basePrice_;};
 
 private:
     size_t amount_;
