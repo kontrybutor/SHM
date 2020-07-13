@@ -22,7 +22,8 @@ public:
     size_t getSpeed() const { return speed_; }
     size_t getMaxCrew() const { return maxCrew_; }
     size_t getCapacity() const { return capacity_; }
-
+    size_t getAvailableSpace() const {return countAvailableSpace();}
+    
     void setName(const std::string& name) { name_ = std::move(name); }
 
 private:
