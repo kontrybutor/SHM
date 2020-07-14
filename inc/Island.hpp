@@ -1,5 +1,7 @@
 #pragma once
 
+#include <cstddef>
+
 class Island {
 public:
     Island() {}
@@ -13,6 +15,8 @@ public:
             : positionX_(positionX), positionY_(positionY) {}
 
         bool operator==(const Coordinates& rhs) const;
+
+        static double countDistance(const Coordinates& lhs, const Coordinates& rhs);
 
     private:
         const int positionX_ = 0;
