@@ -9,6 +9,7 @@ set(SOURCES
     Map.cpp
     Player.cpp
     Ship.cpp
+    Store.cpp
     main.cpp
     )
 
