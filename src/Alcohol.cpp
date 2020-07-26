@@ -1,11 +1,14 @@
 #include "Alcohol.hpp"
 
 #include <iostream>
+#include <typeinfo>
 
-bool Alcohol::operator==(const Cargo& cargo) const {
-    auto alcohol = static_cast<const Alcohol*>(&cargo);
-    return name_ == alcohol->getName() && amount_ == alcohol->getAmount() && basePrice_ == alcohol->getBasePrice() &&
-           power_ == alcohol->getPower();
+bool Alcohol::operator==(const Cargo& other) const {
+    if (typeid(*this).hash_code() != typeid(other).hash_code()) {
+        return false;
+    }
+    return name_ == other.getName() && amount_ == other.getAmount() && basePrice_ == other.getBasePrice() &&
+           getPrice() == other.getPrice();
 }
 
 Cargo& Alcohol::operator+=(size_t amount) {

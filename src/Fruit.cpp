@@ -9,10 +9,12 @@ Fruit& Fruit::operator--() {
     return *this;
 }
 
-bool Fruit::operator==(const Cargo& cargo) const {
-    auto fruit = static_cast<const Fruit*>(&cargo);
-    return name_ == fruit->getName() && amount_ == fruit->getAmount() && basePrice_ == fruit->getBasePrice() &&
-           timeToSpoil_ == fruit->getTimeToSpoil();
+bool Fruit::operator==(const Cargo& other) const {
+    if (typeid(*this).hash_code() != typeid(other).hash_code()) {
+        return false;
+    }
+    return (amount_ == other.getAmount() && basePrice_ == other.getBasePrice() && name_ == other.getName() &&
+            getPrice() == other.getPrice());
 }
 
 Cargo& Fruit::operator+=(size_t amount) {

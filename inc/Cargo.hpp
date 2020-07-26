@@ -8,7 +8,7 @@ public:
         : amount_(amount), name_(name), basePrice_(basePrice) {}
     virtual ~Cargo();
 
-    virtual bool operator==(const Cargo& cargo) const = 0;
+    virtual bool operator==(const Cargo& other) const = 0;
     virtual Cargo& operator+=(size_t amount) = 0;
     virtual Cargo& operator-=(size_t amount) = 0;
 

@@ -19,7 +19,7 @@ public:
     size_t getPrice() const override;
     size_t getBasePrice() const override { return basePrice_; }
 
-    bool operator==(const Cargo& cargo) const override;
+    bool operator==(const Cargo& other) const override;
     Cargo& operator+=(size_t amount) override;
     Cargo& operator-=(size_t amount) override;
 

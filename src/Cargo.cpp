@@ -2,8 +2,11 @@
 
 #include <iostream>
 
-bool Cargo::operator==(const Cargo& cargo) const {
-    return name_ == cargo.name_ && amount_ == cargo.amount_ && basePrice_ == cargo.basePrice_;
+
+// TODO: Make this operators virtual. 
+
+bool Cargo::operator==(const Cargo& other) const {
+    return name_ == other.name_ && amount_ == other.amount_ && basePrice_ == other.basePrice_;
 }
 
 Cargo& Cargo::operator+=(size_t amount) {
